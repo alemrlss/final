@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Alejandro y Jissel</title>
+</head>
+<body>
+    <h1 class="title_names">Alejandro Morales y Jissel Ortega</h1>
+    <h1 class="title_namess">Trabajo Final</h1>
+<div class="main">
+  
+    <div class="column left">
+        <div class="box">
+            <div class="container">
+                
+                <div class="content">
+                  
+                    <div><h4>SIMULACIÓN DE TRÁFICO VEHICULAR</h4></div>
+             
+                    <form action="#">
+                        <div class="details">
+                            <div class="input-box">
+                                <h3>Día Inicio</h3>
+                                <input type="date" id="fechaInicio"> 
+                                 <h3>Hora Inicio</h3>
+                                 <input type="number" min="0" max="23" id="inicioHora" placeholder="Hora (Ejemplo: 12)">
+                                 <input type="number" min="0" max="59" id="inicioMins" placeholder="Minutos (Ejemplo: 10)">
+                            </div>
+        
+                            <div class="input-box">
+                                <h3>Día Finalización</h3>
+                                <input type="date" id="fechaFin">
+                                <h3>Hora Finalización</h3>
+                                <input type="number" min="0" max="23" id="finHora" placeholder="Hora (Ejemplo: 16)">
+                                <input type="number" min="0" max="59" id="finMins" placeholder="Minutos (Ejemplo: 45)">
+                            </div>
+                            
+                        </div>
+                        <div><h4>(La hora es en formato 24 HORAS)</h4></div>
+           
+                        
+                        <button onclick="iniciarSimulacion();">Comenzar</button>
+                
+                    </form>
+        
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        <br>
+    <div class="column right">
+        <div class="containerresultados">
+        
+            <div>
+                <div class="div-reloj">
+                    <h2>Reloj de Simulación</h2>
+                     <img src="/assets/reloj.png" alt="" class="img-reloj">
+                    </div>
+                <h3 id="reloj"></h3>
+            </div>
+        
+            <div class="vias">
+        
+                <h3 id="direccionAuxiliar"></h2>
+        
+                <div class="rvias">
+                    <h3>Via Norte-Sur</h3>
+                    <h4 id="picoNS"></h4>
+                    <ul id="via1"></ul>
+                </div>
+        
+                <div class="rvias">
+                    <h3>Via Sur-Norte</h3>
+                    <h4 id="picoSN"></h4>
+                    <ul id="via2"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="reportes">
+         <div id="reportesFinales">
+                <h2>Reportes finales de la simulación</h2>
+           
+                <h3>Reporte de Via Auxiliar Aerea</h3>
+                <div id="reporteAuxiliar"></div>
+        
+                <h3>Reporte de Embotellamientos</h3>
+                <div id="reporteEmbotellamiento"></div>
+            </div>
+        </div> 
+    </div> 
+</div>
+
+
+<br>
+    <script src="./iniciarSimulacion.js"></script>
+    <script src="./generadorSimulacion.js"></script>
+</div>
+</body>
+</html>
